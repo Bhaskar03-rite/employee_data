@@ -30,7 +30,6 @@ for idx, row in df.iterrows():
         full_row = [current_date, current_department] + row.tolist()
         records.append(full_row)
 
-# If no headers detected (to avoid crash)
 if not headers:
     raise ValueError("No headers detected. Make sure your file has an 'SNo' row.")
 
