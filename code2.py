@@ -65,6 +65,7 @@ if data_started and data_rows:
 # Combine all data blocks
 if all_records:
     final_df = pd.concat(all_records, ignore_index=True)
+
     
     final_df.to_excel("combined_attendance_with_all_columns.xlsx", index=False)
     print("Processed data saved to 'combined_attendance_with_all_columns.xlsx'")
