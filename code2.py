@@ -1,12 +1,13 @@
 import pandas as pd
 import re
 
+#file path
 excel_file = r"C:\Users\VenkataBhaskarReddyS\Downloads\Daily Log Report Matrix.xls"
 sheet1_df = pd.read_excel(excel_file, sheet_name='Sheet1')
 sheet2_df = pd.read_excel(excel_file, sheet_name='Sheet2')
 df = pd.concat([sheet1_df, sheet2_df], axis=0, ignore_index=True)
 
-# Remove the first 5 rows as per your previous step
+# Remove the first 5 rows
 df = df.iloc[5:]
 
 all_records = []
